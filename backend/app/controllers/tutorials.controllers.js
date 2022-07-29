@@ -9,7 +9,7 @@ const app = express();
 create = (req,res)=>{ 
     const {id} = req.body;
     const {tutorial_name,tutorial_desc} = req.body
-    pool.query('INSERT INTO tutorials Values ($1) RETURNING id',[id], (error,results)=>{
+    pool.query('INSERT INTO tutorials Values ($1) RETURNING tutorial_id',[id], (error,results)=>{
             if(error){
                 throw error;
             }
@@ -67,7 +67,7 @@ update = (req,res)=>{
 // Delete all Tutorials from the database.
 deleted = (req,res)=>{
     const id = parseInt(req.params.id)
-    pool.query('DELETE from tutorials where id = $1',[id], (error ,results)=>{
+    pool.query('DELETE from tutorials where tutorial_id = $1',[id], (error ,results)=>{
         if(error)
         {
             throw error;
