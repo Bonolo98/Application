@@ -9,7 +9,7 @@ const app = express();
 create = (req,res)=>{ 
     const {id} = req.body;
     const {tutorial_name,tutorial_desc} = req.body
-    pool.query('INSERT INTO tutorials Values ($1) RETURNING tutorial_id',[id], (error,results)=>{
+    pool.query('INSERT INTO tutorials Values ($1) RETURNING tutorial_id',[tutorial_id], (error,results)=>{
             if(error){
                 throw error;
             }
@@ -35,7 +35,9 @@ getall = (req,res)=>{
 
 // Find a single Tutorial with an id
 getOne = (req, res) => {
-    pool.query('SELECT * FROM tutorials ORDER BY tutorial_id ASC', (error,results)=>{
+
+    // const prod_id = parseInt(req.params.prod_id)
+    pool.query('SELECT * FROM tutorials ORDER BY tutorial_id ASC',[tutorial_id], (error,results)=>{
         if(error){
             throw error;
            }
