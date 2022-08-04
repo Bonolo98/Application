@@ -11,12 +11,14 @@ import {RouterModule} from '@angular/router';
 import { ButtonModule } from 'primeng/button';
 import { TableComponent } from './Components/table/table.component';
 import { HttpClientModule } from '@angular/common/http';
+import { FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     TableComponent,
+    
 
   ],
   imports: [
@@ -28,7 +30,10 @@ import { HttpClientModule } from '@angular/common/http';
     AccordionModule,
     SplitButtonModule,
     ToolbarModule,
-   HttpClientModule
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule,
+
 
 
   

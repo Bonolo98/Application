@@ -1,7 +1,5 @@
 const {Pool} = require("pg");
-// const model = require("../model/database.model")
-//const client = new Client(process.env.DB_URL);
-const connectionString = 'postgres://lcaowuxpqydydx:8238f63c51c0cc11c011d60df5636986efe6eab8b86c8176f210ee71825fa2c9@ec2-54-208-104-27.compute-1.amazonaws.com:5432/dbfgh5a20bbfar'
+const connectionString = 'postgres://mednfezgzcuymm:55d9d5d3c4a3c7ca728752413698bfeb0edff81b4cab921a9f75c97501c7d42e@ec2-3-208-79-113.compute-1.amazonaws.com:5432/d4q4nrggb8ju08'
  const pool = new Pool({
      connectionString: connectionString,
      ssl:{rejectUnauthorized: false //allows external access to database when using nodejs

@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { environment } from 'src/environments/environment';
 import { HttpClient } from '@angular/common/http';
-import { Observable, observable } from 'rxjs';
+import { Observable } from 'rxjs';
 
 
 @Injectable({
@@ -15,19 +15,19 @@ export class TableService {
 
   getTutorials()
   {
-    return this.http.get(`${this.baseUrl}get`,)
+    return this.http.get(`${this.baseUrl}getAll`);
   }
 
 
  getOneTutorial(id:any)
  {
-  return this.http.get(`${this.baseUrl}get`,)
+  return this.http.get(`${this.baseUrl}get`)
  }
 
 
 
- createTutorial(data: any): Observable<any> {
-  return this.http.post(`${this.baseUrl}create`, data);
+ createTutorial(data: any) {
+  return this.http.post(`${this.baseUrl}create`, data,{responseType: 'json'});
 }
 
 

@@ -6,8 +6,11 @@ const app = express(); //Initialize express
 //Import your environmental configs
 const client = require("./app/Config/database.config");
 const user = require("./app/routes/tutorial.routes");
-const db = require('./app/controllers/tutorials.controllers')
-const bodyParser = require('body-parser')
+const db = require('./app/routes/tutorial.routes');
+const log = require('./app/routes/login.routes');
+const reg = require('./app/routes/register.routes');
+const bodyParser = require('body-parser');
+const { application } = require("express");
 const port = process.env.PORT || 8080;
 
 
@@ -15,11 +18,10 @@ app.use(express.json());
 app.use(cors());
 
 
-app.get('/get', db.getall)
-app.get('/get/:id', db.getOne)
-app.post('/create', db.create)
-app.put('/update/:id', db.update)
-app.delete('/delete/:id', db.deleted)
+
+app.use('/api',db)
+app.use('/api',log)
+app.use('/api',reg)
 
 
 client.connect((err) =>{ // Connect to the Database
@@ -29,11 +31,6 @@ client.connect((err) =>{ // Connect to the Database
     console.log("Data logging initialised");
    }
 });
-
-
-// app.get('/', (request, response) => {
-//    response.json({ info: 'Node.js, Express, and Postgres API' })
-//  })
 
 
 
@@ -51,7 +48,6 @@ app.get("/status", (req, res) =>{
 
 
 //DECLARING OUR PORT
-// const port = process.env.PORT || 8080;
 const hostURL = '0.0.0.0'; //Fault-Tolerant listening port for Backend. Picks available dynamic IPv4 and IPv6 addresses of the local host
 //DECRLARING OUR PORT
 

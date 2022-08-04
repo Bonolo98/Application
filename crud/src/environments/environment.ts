@@ -3,7 +3,7 @@
 // The list of file replacements can be found in `angular.json`.
 
 
-const baseUrl = "http://localhost:8080/"
+const baseUrl = "http://localhost:8080/api/"
 //const baseUrl = "https://e-commerceshoes.herokuapp.com/api/"
 export const environment = {
   production: false,
