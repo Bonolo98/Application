@@ -12,12 +12,16 @@ import { ButtonModule } from 'primeng/button';
 import { TableComponent } from './Components/table/table.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { UserComponent } from './Components/user/user.component';
+import { LandingComponent } from './Components/landing/landing.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     TableComponent,
+    UserComponent,
+    LandingComponent,
     
 
   ],
