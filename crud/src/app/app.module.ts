@@ -14,6 +14,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { UserComponent } from './Components/user/user.component';
 import { LandingComponent } from './Components/landing/landing.component';
+import { AuthComponent } from './Components/auth/auth.component';
 
 
 @NgModule({
@@ -22,6 +23,7 @@ import { LandingComponent } from './Components/landing/landing.component';
     TableComponent,
     UserComponent,
     LandingComponent,
+    AuthComponent,
     
 
   ],
