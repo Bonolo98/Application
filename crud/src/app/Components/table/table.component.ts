@@ -63,16 +63,25 @@ export class TableComponent implements OnInit {
   }
 
 
-  Update() {
+  Update(ind:any) {
+
+   
+
+
+  
     console.log(this.Form.value);
     this.tableservice.updateTutorial(this.Form.value).subscribe((respond:any) =>{ this.submitted = true;
     console.log(respond)})
   }
 
-  Delete() {
+  Delete(ind:any) {
     // console.log(this.Form.value);
+
+    ind=this.Form.value.tutorial_id[ind];
+    console.log(ind)
     this.tableservice.deleteTutorial(this.Form.value).subscribe((respond:any) =>{ this.submitted = true;
     console.log(respond)})
+
   }
 
 

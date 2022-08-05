@@ -3,17 +3,22 @@ import { environment } from 'src/environments/environment';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
-
+ 
 @Injectable({
   providedIn: 'root'
 })
 export class TableService {
-
+ 
   baseUrl = environment.baseUrl
+  id:any = localStorage.getItem('selId')
 
   constructor( private http :HttpClient) { }
 
 
+
+
+
+  
 
 
   getTutorials()
@@ -40,8 +45,8 @@ updateTutorial(_id:any){
 //   return this.http.delete(`${this.baseUrl}delete/:id`)
 //  }
 
- deleteTutorial(id: string){
-  return this.http.delete(`${this.baseUrl}delete/:id`)
+ deleteTutorial(data: any){
+  return this.http.delete(`${this.baseUrl}delete/${this.id}`)
  }
 
 
