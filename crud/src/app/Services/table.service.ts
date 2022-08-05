@@ -13,15 +13,17 @@ export class TableService {
 
   constructor( private http :HttpClient) { }
 
+
+
+
   getTutorials()
   {
     return this.http.get(`${this.baseUrl}getAll`);
   }
 
 
- getOneTutorial(id:any)
- {
-  return this.http.get(`${this.baseUrl}get`)
+ getOneTutorial(id:any){
+  return this.http.get(`${this.baseUrl}get/:id`)
  }
 
 
@@ -29,6 +31,22 @@ export class TableService {
  createTutorial(data: any) {
   return this.http.post(`${this.baseUrl}create`, data,{responseType: 'json'});
 }
+
+updateTutorial(_id:any){
+  return this.http.get(`${this.baseUrl}update/:id`)
+ }
+
+//  deleteTutorial(id:any){
+//   return this.http.delete(`${this.baseUrl}delete/:id`)
+//  }
+
+ deleteTutorial(id: string){
+  return this.http.delete(`${this.baseUrl}delete/:id`)
+ }
+
+
+
+
 
 
 

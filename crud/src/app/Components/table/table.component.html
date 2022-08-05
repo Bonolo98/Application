@@ -12,6 +12,7 @@
         <th></th>
         <th>Task</th>
         <th>Description</th>
+        <th>Buttons</th>
       </tr>
     </thead>
     <tbody *ngFor="let tut of tutorials ; let i = index">
@@ -20,10 +21,15 @@
         <th>{{tut.tutorial_id}}</th>
         <td>{{tut.tutorial_name}}</td>
         <td>{{tut.tutorial_desc}}</td>
+        <button (click)="Update()">EDIT</button>
+        <button (click)="Delete()">DELETE</button>
       </tr>
     </tbody>
   </table>
 </div>
+
+
+
 
 
 

@@ -32,12 +32,9 @@ export class TableComponent implements OnInit {
 
   ngOnInit(): void {
 
-
-    
-
-    
   
     this.Form = new FormGroup({
+      tutorial_id: new FormControl(''),
       tutorial_name: new FormControl(''),
       tutorial_desc: new FormControl(''),
     });
@@ -49,13 +46,32 @@ export class TableComponent implements OnInit {
     )
   }
 
-  create() {
-    let tuto = {
-      add: this.Form.value.Add,
-      desc: this.Form.value.Desc
+
+  getOne(){
+    this.tableservice.getOneTutorial(this.Form.value).subscribe((respond: any) => {
+      this.tutorials = respond;
+
     }
-    console.log(tuto)
-    this.tableservice.createTutorial(tuto).subscribe((respond:any) =>{ this.submitted = true;
+    )
+  }
+  
+
+  create() {
+    console.log(this.Form.value);
+    this.tableservice.createTutorial(this.Form.value).subscribe((respond:any) =>{ this.submitted = true;
+    console.log(respond)})
+  }
+
+
+  Update() {
+    console.log(this.Form.value);
+    this.tableservice.updateTutorial(this.Form.value).subscribe((respond:any) =>{ this.submitted = true;
+    console.log(respond)})
+  }
+
+  Delete() {
+    // console.log(this.Form.value);
+    this.tableservice.deleteTutorial(this.Form.value).subscribe((respond:any) =>{ this.submitted = true;
     console.log(respond)})
   }
 
