@@ -21,8 +21,8 @@
         <th>{{tut.tutorial_id}}</th>
         <td>{{tut.tutorial_name}}</td>
         <td>{{tut.tutorial_desc}}</td>
-        <button (click)="Update(i)">EDIT</button>
-        <button (click)="Delete(i)">DELETE</button>
+        <button (click)="Update(tut.tutorial_id)">EDIT</button>
+        <button (click)="Delete(tut.tutorial_id)">DELETE</button>
       </tr>
     </tbody>
   </table>
@@ -44,5 +44,7 @@
     <input type="text" formControlName="tutorial_desc" class="form-control" id="exampleInputPassword1" placeholder="Desc">
   </div>
   
-  <button type="submit" class="btn btn-primary" (click)="create()">Submit</button>
+  <button type="submit" class="btn btn-primary"  (click)="create()">Submit</button>
 </form>
+
+

@@ -10,7 +10,8 @@ import { Observable } from 'rxjs';
 export class TableService {
  
   baseUrl = environment.baseUrl
-  id:any = localStorage.getItem('selId')
+  id:any = localStorage.getItem('tut')
+  idreal:any;
 
   constructor( private http :HttpClient) { }
 
@@ -45,15 +46,18 @@ updateTutorial(_id:any){
 //   return this.http.delete(`${this.baseUrl}delete/:id`)
 //  }
 
- deleteTutorial(data: any){
-  return this.http.delete(`${this.baseUrl}delete/${this.id}`)
- }
+//  deleteTutorial(_id: any){
+//   return this.http.delete(`${this.baseUrl}delete/${this.id}`)
+//   console.log(this.id)
+//  }
 
 
 
-
-
-
+ deleteTutorial(tutorial_id:any){
+   console.log("swesrdtfyguhkil")
+  return this.http.delete(`${this.baseUrl}delete/${tutorial_id}`, {responseType:'text'});
+  
+}
 
 }
 
