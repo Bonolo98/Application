@@ -22,10 +22,10 @@ export class TableService {
   
 
 
-  getTutorials()
-  {
+  getTutorials(){
     return this.http.get(`${this.baseUrl}getAll`);
   }
+
 
 
  getOneTutorial(id:any){
@@ -38,9 +38,11 @@ export class TableService {
   return this.http.post(`${this.baseUrl}create`, data,{responseType: 'json'});
 }
 
+
 updateTutorial(_id:any){
   return this.http.get(`${this.baseUrl}update/:id`)
  }
+
 
 //  deleteTutorial(id:any){
 //   return this.http.delete(`${this.baseUrl}delete/:id`)
@@ -54,7 +56,7 @@ updateTutorial(_id:any){
 
 
  deleteTutorial(tutorial_id:any){
-   console.log("swesrdtfyguhkil")
+   console.log("Delete Successful")
   return this.http.delete(`${this.baseUrl}delete/${tutorial_id}`, {responseType:'text'});
   
 }

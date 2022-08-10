@@ -1,21 +1,23 @@
-
-
 .header-1{
     margin: auto;
     text-align: center;
     border-radius: 10px;
     font-size: 30px;
-    margin-bottom: 50px;
 }
 
-
-.header-2{
+.card{
     margin: auto;
-    text-align: center;
-    border-radius: 10px;
-    font-size: 20px;
-    margin-bottom: 100px;
+    border: none;
 }
+
+.smalltxt{
+    display: flex;
+    justify-content: center;
+  align-items: center;
+
+}
+
+
 .card-2{
     display: flex;
   justify-content: center;
@@ -27,6 +29,15 @@
   border-radius: 20px;
 
 }
+
+.form-control{
+    border-radius: 10px;
+    color: white;
+    background-color: #FF9F9F;
+    border: none;
+
+}
+
 
 .btn{
     width: 30vw;

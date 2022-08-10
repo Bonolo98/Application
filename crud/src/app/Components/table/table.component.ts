@@ -15,7 +15,7 @@ export class TableComponent implements OnInit {
   tutorials: any;
   items: string = "";
   submitted: any
-  tut_id:any
+  tut:any
   emp: any;
 
   // form = new FormGroup({
@@ -50,7 +50,7 @@ export class TableComponent implements OnInit {
   getalltut() {
     this.tableservice.getTutorials().subscribe((respond: any) => {
       this.tutorials = respond;
-      this.tut_id = this.tutorials.tutorial_id;
+      this.tut= this.tutorials.tutorial_id;
     }
     )
 
