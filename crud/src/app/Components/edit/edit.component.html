@@ -1,11 +1,12 @@
 <app-navbar></app-navbar>
 
 
-<div class="card-1" id="Tasks">
+<div class="card-1 w-75" id="Tasks">
     <!-- TASKS TO DO CARD HERE -->
-    <div class="container">
+  <nav class="navbar navbar-expand-lg navbar-light"  >
+    <div class="container"  >
 
-          <form [formGroup] = "Form">
+          <form [formGroup] = "Form"  >
             <div class="form-group">
               <label for="exampleInputEmail1">Task</label>
               <input type="text" class="form-control" formControlName="tutorial_name" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Add Task">
@@ -15,21 +16,16 @@
               <input type="text" formControlName="tutorial_desc" class="form-control" id="exampleInputPassword1" placeholder="Desc">
             </div>
             
-           
+
+
+            <div class="update">
+                  <button type="submit" class="btn btn-primary" (click)="Update(tut.tutorials_id)" >Submit</button>
+            </div>
+            
           </form>
-  
+
     </div>
-  
+  </nav>
   
 </div>
-
-<button type="submit" class="btn btn-primary" routerLink="/table" (click)="create()">Submit</button>
     
-
-
-
-
-
-
-
-

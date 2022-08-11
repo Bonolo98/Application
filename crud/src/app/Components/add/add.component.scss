@@ -1,10 +1,18 @@
-.card-1{
-    // background-color: bisque;
-   margin: auto;
-   height: 40vh;
-   width: 100%;
-}
 
 .btn{
     background-color: #FF9F9F;
+        color: white;
+        margin-left: 10px;
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        text-align: center;
+        width: 100px;
+        margin-bottom: 10px;
+}
+
+.form-group{
+    width: 50%
+    // margin: auto;
+
 }

@@ -8,15 +8,11 @@
 
 .card-2{
     background-color: bisque;
-   margin: auto;
+
    height: 40vh;
    width: 100%;
 }
 
-.card-3{
-   margin: auto;
-   width: 100%;
-}
 
 .navbar-brand{
     background-color: #FF9F9F;
@@ -32,8 +28,32 @@
 
 }
 
-.button{
+.btn{
     background-color: #FF9F9F;
-    padding: 30px;
+        color: white;
+        margin-left: 10px;
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        text-align: center;
+        width: 100px;
+        margin-bottom: 10px;
+    }
 
+.table{
+   margin: auto;
+}
+
+
+
+.flex{
+flex-direction: row;
+}
+
+.checked{
+    padding: 30px
+}
+
+.form-check{
+    color: #FF9F9F;
 }

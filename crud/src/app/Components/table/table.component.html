@@ -54,85 +54,56 @@
  <app-navbar></app-navbar>
 
  <!-- TASKS TO DO CARD HERE -->
-
- <div class="card-1" id="Tasks" >
-   
+ <!-- <div class="navbar-brand" id="Tasks" > 
   <nav class="navbar ">
     <div class="container">
-      <a class="navbar-brand" href="#">TASKS TO DO</a>
+      <a class="" href="#">TASKS TO DO</a>
     </div>
   </nav>
-
+</div> -->
   <!-- TASKS TO DO CARD HERE -->
+
+
+  <table class="table">
+    <thead>
+      <tr>
+        <!-- <th scope="col">#</th> -->
+        <th scope="col">TASK</th>
+        <th scope="col">DESCRIPTION</th>
+        <!-- <th scope="col">OPTIONS</th> -->
   
- <table class="table">
-  <thead>
-    <tr>
-      <th scope="col">#</th>
-      <th scope="col">TASK</th>
-      <th scope="col">DESCRIPTION</th>
-      <th scope="col">OPTIONS</th>
-
-    </tr>
-  </thead>
-  <tbody  *ngFor="let tut of tutorials ; let i = index">
-    <tr>
-      <th scope="row">{{tut.tutorial_id}}</th>
-      <td>{{tut.tutorial_name}}</td>
-      <td>{{tut.tutorial_desc}}</td>
-      <button (click)="Update(tut.tutorial_id)">EDIT</button>
-        <button (click)="Delete(tut.tutorial_id)">DELETE</button>
-    </tr>
-
-
-  </tbody>
-</table>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<br>
-
-
-<div class="ALL">
- 
-    </div>
-  <br>
+      </tr>
+    </thead>
+    <tbody  *ngFor="let tut of tutorials ; let i = index" class="flex">
+      <tr>
+        <!-- <th scope="row">{{tut.tutorial_id}}</th> -->
+        <td>{{tut.tutorial_name}}</td>
+        <td>{{tut.tutorial_desc}}</td>
+        <!-- <button routerLink="/edit">EDIT</button> -->
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+          <label class="form-check-label" for="flexCheckDefault">
+          </label>
+          <button (click)="Delete(tut.tutorial_id)">DELETE</button>
+        </div>
+          
+      </tr>
   
-  
-  
-  
-  
-  <!-- COMPLETED CARD HERE -->
-  
-  
-  
-    <!-- FOOTER FORM -->
-  
-  <div class="card-3 w-75" id="Tasks">
-  
-  <nav class="navbar navbar-expand-lg navbar-light ">
-  <div class="container">
-  
-    <button><i class="button" routerLink="/add">ADD</i></button>
-  
-  </div>
-  </nav>
-  
-  </div>
-  
+    </tbody>
+  </table>
+
+
+
+<div class="button">
+  <!-- <button><i class="fa fa-plus " ></i></button> -->
+
+  <button type="button" class="btn" routerLink="/add">Add</button>
+
   
 
 
 </div>
+
+
+
+

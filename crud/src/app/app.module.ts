@@ -18,7 +18,8 @@ import { LoginComponent } from './Components/auth/login/login.component';
 import {AccordionModule} from 'primeng/accordion';     //accordion and accordion tab
 import {MenuItem} from 'primeng/api';
 import { NavbarComponent } from './Components/navbar/navbar.component';
-import { AddComponent } from './Components/add/add.component';                  //api
+import { AddComponent } from './Components/add/add.component';
+import { EditComponent } from './Components/edit/edit.component';                  //api
 
 
 
@@ -34,7 +35,8 @@ import { AddComponent } from './Components/add/add.component';                  
     LoginComponent,
     NavbarComponent,
     AddComponent,
-    
+    EditComponent,
+
 
   ],
   imports: [

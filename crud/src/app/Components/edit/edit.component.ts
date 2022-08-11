@@ -1,16 +1,16 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormControl, FormsModule, FormBuilder, ReactiveFormsModule } from '@angular/forms';
-import { NavigationEnd, Router, RouterModule, Routes } from '@angular/router';
+import { FormBuilder, ReactiveFormsModule ,FormGroup, FormControl, FormsModule, } from '@angular/forms';
+import { Router } from '@angular/router';
 import { TableService } from 'src/app/Services/table.service';
 
 
-
 @Component({
-  selector: 'app-add',
-  templateUrl: './add.component.html',
-  styleUrls: ['./add.component.scss']
+  selector: 'app-edit',
+  templateUrl: './edit.component.html',
+  styleUrls: ['./edit.component.scss']
 })
-export class AddComponent implements OnInit {
+export class EditComponent implements OnInit {
+
   Form!: FormGroup;
 
   tutorials: any;
@@ -23,11 +23,14 @@ export class AddComponent implements OnInit {
 
   ngOnInit(): void {
 
+    
     this.Form = new FormGroup({
       tutorial_id: new FormControl(''),
       tutorial_name: new FormControl(''),
       tutorial_desc: new FormControl(''),
     });
+
+    
   }
 
 
@@ -41,16 +44,16 @@ export class AddComponent implements OnInit {
   }
 
 
-  create() {
-    console.log(this.Form.value);
-    this.tableservice.createTutorial(this.Form.value).subscribe((respond: any) => {
+
+  Update(tutorials: any) {
+    console.log(tutorials);
+    this.tableservice.updateTutorial(tutorials).subscribe((respond: any) => {
       this.submitted = true;
-     // this.router.navigate(['/table']);
       console.log(respond)
     })
+
     this.getalltut()
   }
-
 
 
 

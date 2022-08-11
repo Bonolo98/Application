@@ -27,7 +27,6 @@ export class TableService {
   }
 
 
-
  getOneTutorial(id:any){
   return this.http.get(`${this.baseUrl}get/:id`)
  }
@@ -39,9 +38,18 @@ export class TableService {
 }
 
 
-updateTutorial(_id:any){
-  return this.http.get(`${this.baseUrl}update/:id`)
+updateTutorial(tutorial_id:any){
+  console.log("Update Successful")
+  return this.http.put(`${this.baseUrl}update/${tutorial_id}`, {responseType: 'text'})
  }
+
+
+
+ deleteTutorial(tutorial_id:any){
+   console.log("Delete Successful")
+  return this.http.delete(`${this.baseUrl}delete/${tutorial_id}`, {responseType:'text'});
+  
+}
 
 
 //  deleteTutorial(id:any){
@@ -53,13 +61,6 @@ updateTutorial(_id:any){
 //   console.log(this.id)
 //  }
 
-
-
- deleteTutorial(tutorial_id:any){
-   console.log("Delete Successful")
-  return this.http.delete(`${this.baseUrl}delete/${tutorial_id}`, {responseType:'text'});
-  
-}
 
 }
 

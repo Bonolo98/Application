@@ -18,14 +18,6 @@ export class TableComponent implements OnInit {
   tut:any
   emp: any;
 
-  // form = new FormGroup({
-  //   itemname: new FormControl(''),
-  //   description: new FormControl(''),
-  //   duedate: new FormControl(''),
-
-  // });
-
-
 
   constructor(private tableservice: TableService,
     private reactiveformmodule: ReactiveFormsModule, private formbuilder: FormBuilder) { }
@@ -116,7 +108,6 @@ export class TableComponent implements OnInit {
       }
       
     );
-
     this.getalltut()
 
   // getProductinfo(index: any) {
