@@ -31,22 +31,31 @@
 }
 
 .form-control{
-    border-radius: 10px;
     color: white;
-    background-color: #FF9F9F;
     border: none;
+    border-radius: 30px;
+    margin: auto;
+    width: 50%;
+    background-color: #FF9F9F;
+    color: white;
 
 }
 
 
 .btn{
-    width: 30vw;
+    width: 50%;
     justify-content: center;
     color: white;
     background-color: #FF9F9F;
-    border-radius: 10px;
+    border-radius: 30px;
     display: flex;
     justify-content: center;
     align-items: center;   
     margin: auto;
+
 }
+
+::placeholder{
+    color: white;
+}
+

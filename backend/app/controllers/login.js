@@ -37,7 +37,8 @@ module.exports.login = async (req, res) => {
                             id:arrData[0].id, 
                             name:arrData[0].name
                         },
-                            process.env.SECRET_KEY,
+                            //process.env.SECRET_KEY,
+                            'tybgunugvt',
                         { expiresIn: '1h' }
                     );
                     
