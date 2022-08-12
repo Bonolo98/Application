@@ -11,34 +11,34 @@
 
     <div class="card-body">
 
-        <form>
+        <form [formGroup]="Form">
             <div class="form-group">
               <!-- <label for="exampleInputEmail1">Email address</label> -->
-              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Name">
+              <input type="email" class="form-control" id="exampleInputEmail1" formControlName="name" aria-describedby="emailHelp" placeholder="Name">
             </div>
             <br>
             <div class="form-group">
               <!-- <label for="exampleInputPassword1">Password</label> -->
-              <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Email">
+              <input type="email" class="form-control" id="exampleInputPassword1" formControlName="email" placeholder="Email">
             </div>
             <br>
 
             <div class="form-group">
                 <!-- <label for="exampleInputEmail1">Email address</label> -->
-                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Password">
+                <input type="email" class="form-control" formControlName="password" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Password">
               </div>
               <br>
 
               <div class="form-group">
                 <!-- <label for="exampleInputEmail1">Email address</label> -->
-                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Confirm Password">
+                <input type="email" class="form-control" id="exampleInputEmail1" formControlName="password" aria-describedby="emailHelp" placeholder="Confirm Password">
               </div>
               <br>
             <div class="form-check">
               <!-- <p class="">Forgot password</p> -->
 
             </div>
-            <button type="submit" class="btn">Register</button>
+            <button type="submit" class="btn" (click)="register()">Register</button>
             <p class="smalltxt" routerLink="/login">Already have an account? login</p>
         </form>
         

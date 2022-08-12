@@ -12,14 +12,44 @@ import { AuthService } from 'src/app/Services/auth.service';
 })
 export class RegisterComponent implements OnInit {
 
-  Form = new FormGroup({
+  //=================properties===================
+  registerForm = new FormGroup({
     name: new FormControl(''),
     email: new FormControl(''),
     password: new FormControl(''),
     confirmPassword: new FormControl(''),
   
-  });
+  })
+  path: any;
+  Form!: FormGroup;
+
+
  
+//===============methods===================
+
+register(){
+  const user = {
+    email:this.registerForm.value.email,
+    password:this.registerForm.value.password,
+    ConfirmPassword:this.registerForm.value.confirmPassword
+  }
+
+  console.table(user)
+
+
+  this.authService.register(user).subscribe((my_data)=>{
+    console.log("From the service",my_data)})
+
+    this.router.navigate(['/table'])
+  
+}
+
+
+
+
+
+//===============defaults===================
+
 
   constructor(private formBuilder: FormBuilder, 
     public authService : AuthService, 
