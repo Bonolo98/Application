@@ -40,7 +40,7 @@ register(){
   this.authService.register(user).subscribe((my_data)=>{
     console.log("From the service",my_data)})
 
-    this.router.navigate(['/table'])
+    this.router.navigate(['/login'])
   
 }
 

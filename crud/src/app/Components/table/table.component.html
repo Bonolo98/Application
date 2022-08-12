@@ -1,69 +1,22 @@
-<!-- <div class="table"  *ngFor="let tut of tutorials ; let i = index">
-    <p>{{tut.tutorial_name}}</p>
-    <p>{{tut.tutorial_desc}}</p>
-</div> -->
-<!-- 
 
-<div class="overflow-x-auto"  >
-  <table class="table w-full">
-
-    <thead>
-      <tr>
-        <th></th>
-        <th>Task</th>
-        <th>Description</th>
-        <th>Buttons</th>
-      </tr>
-    </thead>
-    <tbody *ngFor="let tut of tutorials ; let i = index">
-
-      <tr>
-        <th>{{tut.tutorial_id}}</th>
-        <td>{{tut.tutorial_name}}</td>
-        <td>{{tut.tutorial_desc}}</td>
-        <button (click)="Update(tut.tutorial_id)">EDIT</button>
-        <button (click)="Delete(tut.tutorial_id)">DELETE</button>
-      </tr>
-    </tbody>
-  </table>
-</div>
-
-
-
-
-
-
-
-<form [formGroup] = "Form">
-  <div class="form-group">
-    <label for="exampleInputEmail1">Task</label>
-    <input type="text" class="form-control" formControlName="tutorial_name" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Add Task">
-  </div>
-  <div class="form-group" >
-    <label for="exampleInputPassword1">Description</label>
-    <input type="text" formControlName="tutorial_desc" class="form-control" id="exampleInputPassword1" placeholder="Desc">
-  </div>
-  
-  <button type="submit" class="btn btn-primary"  (click)="create()">Submit</button>
-</form>
-
- -->
 
 
 
  <app-navbar></app-navbar>
 
- <!-- TASKS TO DO CARD HERE -->
- <!-- <div class="navbar-brand" id="Tasks" > 
-  <nav class="navbar ">
-    <div class="container">
-      <a class="" href="#">TASKS TO DO</a>
-    </div>
-  </nav>
-</div> -->
   <!-- TASKS TO DO CARD HERE -->
 
+  <div class="card-1" id="Tasks">
+    <!-- TASKS TO DO CARD HERE -->
+    <div class="container">
+      <form [formGroup]="Form">
+       
+      
 
+      </form>
+    </div>
+  </div>
+  
   <table class="table">
     <thead>
       <tr>
