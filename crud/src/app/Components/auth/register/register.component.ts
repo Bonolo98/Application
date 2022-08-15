@@ -17,21 +17,29 @@ export class RegisterComponent implements OnInit {
     name: new FormControl(''),
     email: new FormControl(''),
     password: new FormControl(''),
-    confirmPassword: new FormControl(''),
+    ConfirmPassword: new FormControl(''),
   
   })
   path: any;
   Form!: FormGroup;
 
 
+
+
+  submitted = false;
+  isSuccessful = false;
+  isSignUpFailed = false;
+  errorMessage = '';
+
  
 //===============methods===================
 
 register(){
-  const user = {
+  let user = {
+    name:this.registerForm.value.email,
     email:this.registerForm.value.email,
     password:this.registerForm.value.password,
-    ConfirmPassword:this.registerForm.value.confirmPassword
+    ConfirmPassword:this.registerForm.value.ConfirmPassword
   }
 
   console.table(user)

@@ -4,11 +4,16 @@ import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
 
-//LOCAL STORAGE
+//LOCAL STORAGE FOR TOKEN
 const token = localStorage.getItem('access_token');
 const httpOptions = {
   headers: new HttpHeaders({ 'Content-Type': 'application/json', 'token': `${token}` })
 };
+
+
+// //
+// email: String;
+// password: String;
 
 
 @Injectable({
@@ -16,21 +21,37 @@ const httpOptions = {
 })
 export class AuthService {
   baseUrl$ = environment.baseUrl;
+  isLoggedIn: boolean | undefined;
 
   constructor(private http: HttpClient,private router: Router) { }
 
 
-//LOGIN FUNCTION
+//LOGIN TO AN EXISTING ACCOUNT FUNCTION
 login(users : any): Observable<any> {
   return this.http.post(`${this.baseUrl$}login`, users)
 }
 
 
-//REGISTER FUNCTION
+//REGISTER A USER FUNCTION
   register(users : any) {
     return this.http.post(`${this.baseUrl$}register`, users);
   }
 }
+
+
+//LOGOUT FUNCTION
+Logout() {
+  let removeToken = localStorage.removeItem('access_token');
+  if (removeToken == null) {
+    this.router.navigate(['login']);
+  }
+}
+
+// get isLoggedIn(): boolean {
+//   let authToken = localStorage.getItem('access_token');
+//   return authToken !== null ? true : false;
+// }
+
 
 //TOKEN HERE
 //   getToken() {
