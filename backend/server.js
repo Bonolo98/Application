@@ -9,8 +9,10 @@ const user = require("./app/routes/tutorial.routes");
 const db = require('./app/routes/tutorial.routes');
 const log = require('./app/routes/login.routes');
 const reg = require('./app/routes/register.routes');
+const pp = require('./app/routes/user.routes')
 const bodyParser = require('body-parser');
 const { application } = require("express");
+
 const port = process.env.PORT || 8080;
 
 
@@ -19,6 +21,7 @@ app.use(cors());
 
 
 
+app.use('/api',pp)
 app.use('/api',db)
 app.use('/api',log)
 app.use('/api',reg)

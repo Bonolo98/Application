@@ -35,7 +35,7 @@
     border: none;
     border-radius: 30px;
     margin: auto;
-    width: 50%;
+    width: 70%;
     background-color: #FF9F9F;
     color: white;
 
@@ -56,6 +56,18 @@
 }
 
 ::placeholder{
+    color: white;
+}
+
+
+.logo{
+    background-color: #FF9F9F;
+    font-size: 25px;
+    max-width: 200px;
+    max-height: 200px;
+    padding: 40px;
+    margin: auto;
+    border-radius: 10px;
     color: white;
 }
 

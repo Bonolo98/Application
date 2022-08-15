@@ -36,16 +36,20 @@ login(users : any): Observable<any> {
   register(users : any) {
     return this.http.post(`${this.baseUrl$}register`, users);
   }
+
+  getProfile(id:any){
+    return this.http.get(`${this.baseUrl$}profile/${id}`,httpOptions)
+  }
 }
 
 
 //LOGOUT FUNCTION
-Logout() {
-  let removeToken = localStorage.removeItem('access_token');
-  if (removeToken == null) {
-    this.router.navigate(['login']);
-  }
-}
+// Logout() {
+//   let removeToken = localStorage.removeItem('access_token');
+//   if (removeToken == null) {
+//     this.router.navigate(['login']);
+//   }
+// }
 
 // get isLoggedIn(): boolean {
 //   let authToken = localStorage.getItem('access_token');
@@ -65,10 +69,12 @@ Logout() {
 
 
 
-//GET USER PROFILE
+// GET USER PROFILE
 
-// getUserProfile(){
-//   return this.http.get(`${this.baseUrl$}profile`,httpOptions)
+
+
+// Userprofile(){
+//   returnthis.http.get(`${this.baseUrl$}profile`, httpOptions)
 // }
 
 

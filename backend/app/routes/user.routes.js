@@ -1,9 +1,11 @@
+
+
 const express = require("express");
 const router = express.Router();
-const login = require("../controllers/login");
 const Profile = require('../controllers/Profile')
 
-router.post('/login',login.login);
+
+router.get('/profile/:id', Profile.userProfile)
 
 
 module.exports = router;
