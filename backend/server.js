@@ -9,6 +9,7 @@ const user = require("./app/routes/tutorial.routes");
 const db = require('./app/routes/tutorial.routes');
 const log = require('./app/routes/login.routes');
 const reg = require('./app/routes/register.routes');
+const upd = require('./app/routes/update.routes')
 const pp = require('./app/routes/user.routes')
 const bodyParser = require('body-parser');
 const { application } = require("express");
@@ -25,6 +26,7 @@ app.use('/api',pp)
 app.use('/api',db)
 app.use('/api',log)
 app.use('/api',reg)
+app.use('/api',upd)
 
 
 client.connect((err) =>{ // Connect to the Database

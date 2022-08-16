@@ -29,13 +29,11 @@
 }
 
 .btn{
-    background-color: #FF9F9F;
-        color: white;
-        margin-left: 10px;
+        color: #FF9F9F;
         position: fixed;
         left: 0;
         bottom: 0;
-        text-align: center;
+        // text-align: center;
         width: 100px;
         margin-bottom: 10px;
     }
@@ -43,8 +41,6 @@
 .table{
    margin: auto;
 }
-
-
 
 .flex{
 flex-direction: row;
@@ -54,6 +50,12 @@ flex-direction: row;
     padding: 30px
 }
 
-.form-check{
+// .form-check{
+
+// }
+
+
+.butns{
+    margin-left: 30px;
     color: #FF9F9F;
 }

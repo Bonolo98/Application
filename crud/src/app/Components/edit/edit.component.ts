@@ -1,7 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { FormBuilder, ReactiveFormsModule ,FormGroup, FormControl, FormsModule, } from '@angular/forms';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { TableService } from 'src/app/Services/table.service';
+import { tutorial } from 'src/models/tutorial.model';
 
 
 @Component({
@@ -19,7 +20,25 @@ export class EditComponent implements OnInit {
   tut:any
   emp: any;
 
-  constructor(private tableservice : TableService,  private reactiveformmodule: ReactiveFormsModule, private formbuilder: FormBuilder, private router : Router) { }
+  message = '';
+  // editID :any = localStorage.getItem('editID')
+
+
+  @Input()viewMode = false
+
+  @Input() currentTutorial: tutorial= {
+    tutorial_id:'',
+    tutorial_name:'',
+    tutorial_desc:'',
+    
+    // published: false  
+
+  };
+
+
+  
+
+  constructor(private tableservice : TableService,  private reactiveformmodule: ReactiveFormsModule, private formbuilder: FormBuilder, private router : Router, private route : ActivatedRoute) { }
 
   ngOnInit(): void {
 
@@ -29,8 +48,11 @@ export class EditComponent implements OnInit {
       tutorial_name: new FormControl(''),
       tutorial_desc: new FormControl(''),
     });
-
     
+    
+    // console.log("On edit " +this.editID)
+    this.getalltut()
+    //this.Update(id);
   }
 
 
@@ -38,6 +60,7 @@ export class EditComponent implements OnInit {
     this.tableservice.getTutorials().subscribe((respond: any) => {
       this.tutorials = respond;
       this.tut= this.tutorials.tutorial_id;
+      console.log(respond)
     }
     )
 
@@ -45,14 +68,19 @@ export class EditComponent implements OnInit {
 
 
 
-  Update(tutorials: any) {
-    console.log(tutorials);
-    this.tableservice.updateTutorial(tutorials).subscribe((respond: any) => {
-      this.submitted = true;
-      console.log(respond)
-    })
+  Update() {
 
-    this.getalltut()
+    let body= {
+      tutorial_name: this.Form.value.tutorial_name,
+      tutorial_desc: this.Form.value.tutorial_desc
+
+    }
+      
+     
+    this.tableservice.updateTutorial(body).subscribe((edtBody)=>{
+      console.table(edtBody)
+    })
+  
   }
 
 

@@ -1,11 +1,22 @@
 <!-- NAVBAR HERE -->
 <nav class="navbar navbar-expand-lg navbar-light ">
     <div class="container">
-      <a class="navbar-brand" routerLink="/table">HOME</a>
-      <a class="navbar-brand" id="profile" routerLink="/user">PROFILE</a>
-      <li><h5>{{name}}</h5></li>
+      <i class="fa-solid fa-house fa-2x"  routerLink="/table"></i>
+      <i class="fa-solid fa-user fa-2x" routerLink="/user"></i>
+      <div class="dropdown">
+        <button class="btn btn-secondary " type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <i class="fa-solid fa-caret-down fa-2x"></i>
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <a class="dropdown-item" href="#">Action</a>
+          <a class="dropdown-item" href="#">Another action</a>
+          <a class="dropdown-item" href="#">Something else here</a>
+        </div>
+      </div>
+
+      <!-- <li><h5>{{name}}</h5></li>
       <li><p>{{id}}</p></li>
-      <li><p>{{email}}</p></li>
+      <li><p>{{email}}</p></li> -->
     </div>
   </nav>
 

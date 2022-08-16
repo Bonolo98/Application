@@ -2,10 +2,10 @@
 
 const express = require("express");
 const router = express.Router();
-const Profile = require('../controllers/Profile')
+const userP = require('../controllers/Profile')
 
 
-router.get('/profile/:id', Profile.userProfile)
+router.get('/profile/:id', userP.userProfile)
 
 
 module.exports = router;

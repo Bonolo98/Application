@@ -17,7 +17,6 @@ export class AddComponent implements OnInit {
   items: string = "";
   submitted: any
   tut:any
-  emp: any;
 
   constructor(private tableservice : TableService,  private reactiveformmodule: ReactiveFormsModule, private formbuilder: FormBuilder, private router : Router) { }
 

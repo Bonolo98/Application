@@ -8,6 +8,7 @@ import { LoginComponent } from './Components/auth/login/login.component';
 import { RegisterComponent } from './Components/auth/register/register.component';
 import { AddComponent } from './Components/add/add.component';
 import { EditComponent } from './Components/edit/edit.component';
+import { GetoneComponent } from './Components/getone/getone.component';
 // import { AuthguardGuard } from './Guards/authguard.guard';
 
 
@@ -17,8 +18,9 @@ const routes: Routes = [
   { path : "register", component: RegisterComponent },
   { path : "add", component: AddComponent,  },
   { path : "table", component: TableComponent, },
-  { path : "edit", component: EditComponent, },
+  { path : "edit/:id", component: EditComponent, },
   { path : "user", component: UserComponent, },
+  { path : "getone", component: GetoneComponent, },
   { path: '', redirectTo: 'landing', pathMatch: 'full' },
 
 ];

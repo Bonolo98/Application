@@ -19,7 +19,8 @@ import {AccordionModule} from 'primeng/accordion';     //accordion and accordion
 import {MenuItem} from 'primeng/api';
 import { NavbarComponent } from './Components/navbar/navbar.component';
 import { AddComponent } from './Components/add/add.component';
-import { EditComponent } from './Components/edit/edit.component';                  //api
+import { EditComponent } from './Components/edit/edit.component';
+import { GetoneComponent } from './Components/getone/getone.component';                  //api
 
 
 
@@ -36,6 +37,7 @@ import { EditComponent } from './Components/edit/edit.component';               
     NavbarComponent,
     AddComponent,
     EditComponent,
+    GetoneComponent,
 
 
   ],

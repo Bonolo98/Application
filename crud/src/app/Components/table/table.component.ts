@@ -17,6 +17,7 @@ export class TableComponent implements OnInit {
   submitted: any
   tut:any
   emp: any;
+  indx:any
 
 
   constructor(private tableservice: TableService,
@@ -37,7 +38,13 @@ export class TableComponent implements OnInit {
 
   }
 
-
+sendIndex(ind:any)
+{
+   this.indx= this.tutorials[ind].tutorial_id
+   console.log("From table "+this.indx)
+   localStorage.setItem('editID',this.indx)
+   
+}
 
   getalltut() {
     this.tableservice.getTutorials().subscribe((respond: any) => {
@@ -70,13 +77,13 @@ export class TableComponent implements OnInit {
 
 
 
-  Update(ind: any) {
-    console.log(this.Form.value);
-    this.tableservice.updateTutorial(this.Form.value).subscribe((respond: any) => {
-      this.submitted = true;
-      console.log(respond)
-    })
-  }
+  // Update(ind: any) {
+  //   console.log(this.Form.value);
+  //   this.tableservice.updateTutorial(this.Form.value).subscribe((respond: any) => {
+  //     this.submitted = true;
+  //     console.log(respond)
+  //   })
+  // }
 
   // Delete(index: any) {
   //   index = this.Form.value.tutorial_id[index];

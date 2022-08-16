@@ -35,7 +35,7 @@ export class NavbarComponent implements OnInit {
   }
 
   // user(){
-  //    this.auth.getProfile().subscribe({next:data => {
+  //    this.auth.getProfile(6).subscribe({next:data => {
   //     this.profile = data
   //     this.id = this.profile.id
   //     this.name = this.profile.name

@@ -1,8 +1,5 @@
 
 const pool = require("../config/database.config");
-const express = require("express");
-const bodyparser = require('body-parser');
-const app = express();
 
 
 exports.update = (request, response) => {

@@ -29,12 +29,22 @@
         <!-- <th scope="row">{{tut.tutorial_id}}</th> -->
         <td>{{tut.tutorial_name}}</td>
         <td>{{tut.tutorial_desc}}</td>
-        <!-- <button routerLink="/edit">EDIT</button> -->
+        
         <div class="form-check">
           <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
           <label class="form-check-label" for="flexCheckDefault">
           </label>
-          <button (click)="Delete(tut.tutorial_id)">DELETE</button>
+
+          <!-- EDIT AND  DELETE BUTTON -->
+          <div class="butns">
+            <button style="margin-left: 12px;" (click)="sendIndex(i)" routerLink='/edit/{{tut.tutorial_id}}'>
+              <i class="fa-solid fa-pen-to-square"></i>
+            </button>
+            <button  style="margin-left:12px;" (click)="Delete(tut.tutorial_id)">
+              <i class="fa-solid fa-trash-can"></i>
+            </button>
+          </div>
+         
         </div>
           
       </tr>
@@ -45,13 +55,7 @@
 
 
 <div class="button">
-  <!-- <button><i class="fa fa-plus " ></i></button> -->
-
-  <button type="button" class="btn" routerLink="/add">Add</button>
-
-  
-
-
+  <button type="button" class="btn" routerLink="/add"><i class="fa-solid fa-circle-plus fa-3x"></i></button>
 </div>
 
 

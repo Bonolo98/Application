@@ -9,6 +9,7 @@ import { Observable } from 'rxjs';
 })
 export class TableService {
  
+  editID :any = localStorage.getItem('editID')
   baseUrl = environment.baseUrl
   id:any = localStorage.getItem('tut')
   idreal:any;
@@ -27,8 +28,9 @@ export class TableService {
   }
 
 
- getOneTutorial(id:any){
-  return this.http.get(`${this.baseUrl}get/:id`)
+ getOneTutorial(tutorial_id:any){
+  return this.http.get(`${this.baseUrl}get/${tutorial_id}`)
+  
  }
 
 
@@ -38,9 +40,10 @@ export class TableService {
 }
 
 
-updateTutorial(tutorial_id:any){
+updateTutorial(data:any): Observable<any>
+{
+  return this.http.put(`${this.baseUrl}update/${this.editID}`, data,{responseType: 'json'})
   console.log("Update Successful")
-  return this.http.put(`${this.baseUrl}update/${tutorial_id}`, {responseType: 'text'})
  }
 
 
