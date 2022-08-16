@@ -18,13 +18,15 @@
         <label for="exampleInputPassword1"></label>
         <input type="text" formControlName="tutorial_desc" class="form-control" id="exampleInputPassword1"
           placeholder="Description">
-          
       </div>
     </form>
+
+    <div class="buttondiv">
+      <button type="submit" class="btn" routerLink="/table" (click)="create()">Save</button>
+      <button type="submit" class="bt2" routerLink="/table">Cancel</button>
+    </div>
+    
   </div>
 </div>
 
 
-<div class="buttondiv">
-  <button type="submit" class="btn" routerLink="/table" (click)="create()">Submit</button>
-</div>

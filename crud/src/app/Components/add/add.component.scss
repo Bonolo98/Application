@@ -10,26 +10,43 @@
 }
 
 
-// .btn{
-//     background-color: #FF9F9F;
-//         color: white;
-//         // margin-left: 10px;
-//         position: fixed;
-//         left: 0;
-//         bottom: 0;
-//         text-align: center;
-//         width: 100px;
-//         margin-bottom: 10px;
-//         margin: auto;
+.btn{
+    background-color: #FF9F9F;
+        color: white;
+        // margin-left: 10px;
+        border-radius: 10px;
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        text-align: center;
+        width: 100px;
+        margin-bottom: 10px;
+        border-radius: 30px;
         
-// }
+}
 
-.buttondiv{
-    border-radius: 30px;
-    margin: auto;
+.bt2{
+    background-color: #EFB865;
+    padding: 7px;
+    color: white;
+    margin-left: 105px;
+    border-radius: 10px;
+    position: fixed;
+    left: 0;
+    bottom: 0;
     text-align: center;
     width: 100px;
-    background-color: #FF9F9F;
+    margin-bottom: 10px;
+    border-radius: 30px;
+
+}
+
+
+.buttondiv{
+    margin: auto;
+    text-align: center;
+    width: 100%;
+    // background-color: #FF9F9F;
     color: white;
     position: fixed;
     left: 0;
