@@ -12,18 +12,18 @@ import { AuthService } from 'src/app/Services/auth.service';
 })
 export class RegisterComponent implements OnInit {
 
+
   //=================properties===================
   registerForm = new FormGroup({
     name: new FormControl(''),
     email: new FormControl(''),
     password: new FormControl(''),
     ConfirmPassword: new FormControl(''),
-  
   })
+
+
   path: any;
   Form!: FormGroup;
-
-
 
 
   submitted = false;
@@ -31,7 +31,7 @@ export class RegisterComponent implements OnInit {
   isSignUpFailed = false;
   errorMessage = '';
 
- 
+
 //===============methods===================
 
 register(){
@@ -52,12 +52,7 @@ register(){
   
 }
 
-
-
-
-
 //===============defaults===================
-
 
   constructor(private formBuilder: FormBuilder, 
     public authService : AuthService, 
@@ -77,4 +72,9 @@ register(){
   }
 
 }
+
+
+
+
+  
 

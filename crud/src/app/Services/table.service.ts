@@ -12,27 +12,20 @@ export class TableService {
   editID :any = localStorage.getItem('editID')
   baseUrl = environment.baseUrl
   id:any = localStorage.getItem('tut')
-  idreal:any;
+  idreal:any; 
 
   constructor( private http :HttpClient) { }
-
-
-
-
-
-  
 
 
   getTutorials(){
     return this.http.get(`${this.baseUrl}getAll`);
   }
 
-
+  
  getOneTutorial(tutorial_id:any){
   return this.http.get(`${this.baseUrl}get/${tutorial_id}`)
   
  }
-
 
 
  createTutorial(data: any) {

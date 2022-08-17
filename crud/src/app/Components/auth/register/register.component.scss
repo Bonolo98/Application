@@ -52,6 +52,16 @@
 
 }
 
+.logo{
+    background-color: #FF9F9F;
+    font-size: 25px;
+    max-width: 200px;
+    max-height: 200px;
+    padding: 40px;
+    margin: auto;
+    border-radius: 10px;
+    color: white;
+}
 
 
 .form-control{
@@ -59,7 +69,7 @@
     border: none;
     border-radius: 30px;
     margin: auto;
-    width: 50%;
+    width: 50vw;
     background-color: #FF9F9F;
     color: white;
 

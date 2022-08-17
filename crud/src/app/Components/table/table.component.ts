@@ -38,6 +38,8 @@ export class TableComponent implements OnInit {
 
   }
 
+
+  //WE ARE SENDING THIS DATA'S ID TO SERVICES SO IT CAN BE ACCESSED BY ANOTHER COMPONENT
 sendIndex(ind:any)
 {
    this.indx= this.tutorials[ind].tutorial_id
@@ -64,7 +66,7 @@ sendIndex(ind:any)
   //   )
   // }
 
-
+//WE ARE CREATING A TUTORIAL ON THE TABLE AND SENDING THIS DATA THROUGH TABLE.SERVICES
   create() {
     console.log(this.Form.value);
     this.tableservice.createTutorial(this.Form.value).subscribe((respond: any) => {
@@ -74,38 +76,7 @@ sendIndex(ind:any)
     this.getalltut()
   }
 
-
-
-
-  // Update(ind: any) {
-  //   console.log(this.Form.value);
-  //   this.tableservice.updateTutorial(this.Form.value).subscribe((respond: any) => {
-  //     this.submitted = true;
-  //     console.log(respond)
-  //   })
-  // }
-
-  // Delete(index: any) {
-  //   index = this.Form.value.tutorial_id[index];
-  //   console.log(index , "number 1")
-  //   this.tableservice.deleteTutorial(this.Form.value).subscribe((respond: any) => {
-  //     this.submitted = true;
-  //     console.log(respond , "number 2")
-  //   })
-  //   this.getProductinfo(index)
-  // }
-
-
-  //   Delete(tutorial_id: any){
-  //   this.tableservice.deleteTutorial(tutorial_id)
-  //   .subscribe((respond: any) =>{
-  //     this.getalltut();
-
-  //     localStorage.removeItem("tut");
-  //   })
-  // }
-
-
+//WE ARE DELETING DATA FROM THE FRONTEND BY SENDING THIS REQUEST TO TABLE.SERVICES
   Delete(tutorials: any) {
     console.log(tutorials);
 
